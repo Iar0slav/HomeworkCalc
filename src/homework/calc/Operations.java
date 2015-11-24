@@ -21,7 +21,9 @@ public class Operations {
     }
 
     public void div(int x, int y){
-        int z = x / y;
+        float a = x;
+        float b = y;
+        float z = a / b;
         System.out.println("Result of operation " + x + " / " + y + " is: " + z);
     }
 
