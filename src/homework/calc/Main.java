@@ -11,7 +11,7 @@ public class Main {
 
     public static void main(String[] args) throws Exception {
 
-        final String GREETENGS  = "Welcome to my small calculator :) ";
+        final String GREETINGS  = "Welcome to my small calculator :) It is works only with int values.";
         final String EXIT       = "exit";
         final String MANUAL     = "You can make next operations: + , - , / , * . If you want to exit, type " + EXIT;
         final String FIRSTINT   = "Please, enter first int, or " + EXIT + " to finish.";
@@ -19,7 +19,6 @@ public class Main {
         final String OPERATOR   = "Please, enter operation symbol. You can choise from + , - , / , * , or " + EXIT + " to finish.";
         final String REPEAT     = "Enter int please, or " + EXIT + " to finish.";
         final String ZERO       = "In this calculator dividing by 0 is impossible :)";
-//        final String INCORRECT  = "Incorrect operation symbol.";
 
         int firstInteger    = 0;
         int secondInteger   = 0;
@@ -29,7 +28,7 @@ public class Main {
         boolean operatorCircle  = true;
         boolean secondCircle    = true;
 
-        System.out.println(GREETENGS);
+        System.out.println(GREETINGS);
         System.out.println(MANUAL);
         System.out.println("");
 
@@ -124,8 +123,7 @@ public class Main {
         }
 
         Operations operation = new Operations();
-
-        operation.operationSelect(firstInteger, secondInteger, operator);
+        operation.simpleOperations(firstInteger, secondInteger, operator);
 
     }
 
