@@ -10,12 +10,12 @@ public class Main {
     public static void main(String[] args) throws Exception {
 
         final String GREETENGS  = "Welcome to my small calculator :) ";
-        final String MANUAL     = "You can make next operations: + , - , / , * . If you want to exit, type \"exit\"";
-        final String FIRSTINT   = "Please, enter first int, or \"exit\" to finish.";
-        final String SECONDINT  = "Please, enter second int, or \"exit\" to finish.";
-        final String OPERATOR   = "Please, enter operation symbol. You can choise from + , - , / , * , or \"exit\" to finish.";
-        final String REPEAT     = "Enter int please, or \"exit\" to finish.";
         final String EXIT       = "exit";
+        final String MANUAL     = "You can make next operations: + , - , / , * . If you want to exit, type " + EXIT;
+        final String FIRSTINT   = "Please, enter first int, or " + EXIT + " to finish.";
+        final String SECONDINT  = "Please, enter second int, or " + EXIT + " to finish.";
+        final String OPERATOR   = "Please, enter operation symbol. You can choise from + , - , / , * , or " + EXIT + " to finish.";
+        final String REPEAT     = "Enter int please, or " + EXIT + " to finish.";
         final String INCORRECT  = "Incorrect operation symbol.";
 
         int firstInteger    = 0;
@@ -119,18 +119,13 @@ public class Main {
 
         Operations operation = new Operations();
 
-        if (operator.equals("+")) {
-            operation.sum(firstInteger, secondInteger);
-        } else if (operator.equals("-")){
-            operation.sub(firstInteger, secondInteger);
-        } else if (operator.equals("*")){
-            operation.mul(firstInteger, secondInteger);
-        } else if (operator.equals("/")){
-            operation.div(firstInteger, secondInteger);
-        } else {
-            System.out.println(INCORRECT);
+        switch (operator){
+            case "+": operation.sum(firstInteger, secondInteger); break;
+            case "-": operation.sub(firstInteger, secondInteger); break;
+            case "*": operation.mul(firstInteger, secondInteger); break;
+            case "/": operation.div(firstInteger, secondInteger); break;
+            default: System.out.println(INCORRECT);
         }
-
     }
 
 }
