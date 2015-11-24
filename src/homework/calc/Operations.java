@@ -6,6 +6,7 @@ package homework.calc;
 public class Operations {
 
     final String INCORRECT  = "Incorrect operation symbol.";
+    final String RESULT     = "Result of operation ";
 
     public void simpleOperations (int x, int y, String operator){
         long answer;
@@ -13,42 +14,21 @@ public class Operations {
         switch (operator){
             case "+":
                 answer = (long) x + (long) y;
-                System.out.println("Result of operation " + x + " + " + y + " is: " + answer);
+                System.out.println(RESULT + x + " " + operator + " " + y + " is: " + answer);
                 break;
             case "-":
                 answer = (long) x - (long) y;
-                System.out.println("Result of operation " + x + " - " + y + " is: " + answer);
+                System.out.println(RESULT + x + " " + operator + " " + y + " is: " + answer);
                 break;
             case "*":
                 answer = (long) x * (long) y;
-                System.out.println("Result of operation " + x + " * " + y + " is: " + answer);
+                System.out.println(RESULT + x + " " + operator + " " + y + " is: " + answer);
                 break;
             case "/":
                 answerFloat = (float) x / (float) y;
-                System.out.println("Result of operation " + x + " / " + y + " is: " + answerFloat);
+                System.out.println(RESULT + x + " " + operator + " " + y + " is: " + answerFloat);
                 break;
             default: System.out.println(INCORRECT);
         }
     }
-/*
-    public void sum(int x, int y){
-        long z = (long) x + (long) y;
-        System.out.println("Result of operation " + x + " + " + y + " is: " + z);
-    }
-
-    public void sub(int x, int y){
-        long z = (long) x - (long) y;
-        System.out.println("Result of operation " + x + " - " + y + " is: " + z);
-    }
-
-    public void mul(int x, int y){
-        long z = (long) x * (long) y;
-        System.out.println("Result of operation " + x + " * " + y + " is: " + z);
-    }
-
-    public void div(int x, int y){
-        long z = (long) x / (long) y;
-        System.out.println("Result of operation " + x + " / " + y + " is: " + z);
-    }
-*/
 }
