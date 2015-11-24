@@ -1,5 +1,7 @@
 package homework.calc;
 
+import com.sun.xml.internal.bind.v2.TODO;
+
 import java.util.Scanner;
 
 /**
@@ -16,7 +18,8 @@ public class Main {
         final String SECONDINT  = "Please, enter second int, or " + EXIT + " to finish.";
         final String OPERATOR   = "Please, enter operation symbol. You can choise from + , - , / , * , or " + EXIT + " to finish.";
         final String REPEAT     = "Enter int please, or " + EXIT + " to finish.";
-        final String INCORRECT  = "Incorrect operation symbol.";
+        final String ZERO       = "In this calculator dividing by 0 is impossible :)";
+//        final String INCORRECT  = "Incorrect operation symbol.";
 
         int firstInteger    = 0;
         int secondInteger   = 0;
@@ -60,6 +63,9 @@ public class Main {
         if (operatorScanner.hasNext(EXIT)){
             System.exit(0);
         }
+
+        //TODO here must be checking deviding by 0;
+
 
         if(operatorScanner.hasNext("\\+")){
             operator = operatorScanner.next();
@@ -119,13 +125,8 @@ public class Main {
 
         Operations operation = new Operations();
 
-        switch (operator){
-            case "+": operation.sum(firstInteger, secondInteger); break;
-            case "-": operation.sub(firstInteger, secondInteger); break;
-            case "*": operation.mul(firstInteger, secondInteger); break;
-            case "/": operation.div(firstInteger, secondInteger); break;
-            default: System.out.println(INCORRECT);
-        }
+        operation.operationSelect(firstInteger, secondInteger, operator);
+
     }
 
 }
