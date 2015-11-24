@@ -1,7 +1,5 @@
 package homework.calc;
 
-import com.sun.xml.internal.bind.v2.TODO;
-
 import java.util.Scanner;
 
 /**
@@ -37,7 +35,7 @@ public class Main {
         System.out.println(FIRSTINT);
 
         // цикл обработки первого числа
-        while(firstCircle){
+        do{
 
             Scanner firstCircleScanner = new Scanner(System.in);
 
@@ -64,13 +62,13 @@ public class Main {
                 System.out.println(NONINTEGER);
                 System.out.println(REPEAT);
             }
-        }
+        } while(firstCircle);
 
         //приглашение на ввод оператора
         System.out.println(OPERATOR);
 
         // цикл обработки ввода оператора
-        while(operatorCircle){
+        do{
 
             Scanner operatorScanner = new Scanner(System.in);
 
@@ -96,13 +94,13 @@ public class Main {
             } else {
                 System.out.println(OPERATOR);
             }
-        }
+        } while(operatorCircle);
 
         //приглашение на ввод второго числа
         System.out.println(SECONDINT);
 
         // цикл обработки второго числа
-        while(secondCircle){
+        do{
 
             Scanner secondCircleScanner = new Scanner(System.in);
 
@@ -135,7 +133,7 @@ public class Main {
                 System.out.println(NONINTEGER);
                 System.out.println(REPEAT);
             }
-        }
+        } while(secondCircle);
 
         Operations operation = new Operations();
 
