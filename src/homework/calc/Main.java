@@ -29,11 +29,8 @@ public class Main {
 
         // цикл обработки первого числа
         do{
-
             Scanner firstCircleScanner = new Scanner(System.in);
-
             String temp = firstCircleScanner.nextLine();
-
             boolean isInt = CheckForInt.isInteger(temp);
 
             /*
