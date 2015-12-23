@@ -1,8 +1,5 @@
 package homework.calc;
 
-/**
- * Created by Iaroslav on 25.11.2015.
- */
 public class CheckForInt {
 
     public static boolean isInteger(String s) {
